@@ -1,0 +1,10 @@
+<h1>Game: <%= @game.id %></h1>
+<h2>Game: <%= @game.game_date %></h2>
+
+
+<p><%= link_to "Edit game", edit_game_path(@game) %></p>
+<p><%= link_to "Delete game", game_path(@game),
+                        :data => {:confirm => "Are you sure?",
+                                       :method => "delete"} %></p>
+
+<p><%= link_to "Return to games", game_path(@game) %></p>

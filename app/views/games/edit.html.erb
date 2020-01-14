@@ -1,0 +1,15 @@
+<h1>Edit game</h1>
+
+<%= form_for @game do |f| %>
+  <%= f.label :team_home_id %>
+  <%= f.number_field :team_home_id %>
+  <%= f.label :team_visitor_id %>
+  <%= f.number_field :team_visitor_id %>
+  <%= f.label :team_home_score %>
+  <%= f.number_field :team_home_score %>
+  <%= f.label :team_visitor_score %>
+  <%= f.number_field :team_visitor_score %>
+  <%= f.label :game_date %>
+  <%= f.datetime_field :game_date %>
+  <%= f.submit  %>
+<% end %>

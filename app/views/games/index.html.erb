@@ -1,0 +1,14 @@
+<h1>Games</h1>
+
+<% if @games.any? %>
+  <ul>
+    <% @games.each do |game| %>
+      <li><%= link_to game.game_date, game_path(game) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no games yet.</p>
+<% end %>
+
+
+<p><%= link_to "Create new game", new_game_path %></p>
